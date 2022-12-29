@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#grid-productos {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header header header header" "aside article article article" "footer footer footer footer";
+  height: 100vh;
+  width: 100%;
+}
+
+.piedepagina {
+  grid-area: footer;
+}
+
+.article {
+  grid-area: article;
+}
+
+.header {
+  grid-area: header;
+}
+
+.menu {
+  background-color: #212121;
+  font-family: "Fasthand", cursiva;
+}
+
+.img-fluid {
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem;
+  border-radius: 12rem;
+}
+
+.img__Mario {
+  width: 15rem;
+  height: 15rem;
+}
+
+.rounded {
+  width: 30rem;
+  height: 20rem;
+  border: #daa520 solid 0.3rem;
+}
+
+.img-navbar {
+  display: none;
+}
+
+.navbar-nav {
+  border: #daa520 solid 0.3rem;
+  background-color: #212121;
+  width: 100%;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: #daa520;
+}
+
+.bi {
+  color: #daa520;
+  height: 1rem;
+  width: 1rem;
+}
+
+.btn {
+  margin: 1rem;
+}
+
+.body {
+  font-size: "Raleway", sans-serif;
+  position: relative;
+  background-color: #333333;
+}
+
+.body__title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: #daa520;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+
+.body__subtitle {
+  color: #daa520;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem 1rem;
+}
+
+.body__text, .text-center {
+  font-size: 1.1rem;
+  color: #ffffff;
+  padding: 1rem;
+  margin: 1rem 1rem 0rem 1rem;
+}
+
+.body__list {
+  font-size: 1.1rem;
+  margin: 1rem;
+  color: #000000;
+}
+
+.body__video {
+  display: block;
+  margin: 0rem 22.5rem;
+  border-radius: 2rem;
+  border: #daa520 solid 0.3rem;
+}
+
+.body__link {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #daa520;
+  font-weight: bold;
+}
+
+.card:hover {
+  border: 0.2rem #000000 solid;
+}
+
+.body__alpargatas, .body__alpargatas--4, .body__alpargatas--3, .body__alpargatas--2 {
+  border-radius: 0.5rem;
+  border: #daa520 solid 0.3rem;
+  margin: 2rem 0.2rem 0rem 0.2rem;
+  height: 15rem;
+  width: 15rem;
+}
+
+.body__alpargatas--5 {
+  border-radius: 0.5rem;
+  border: #daa520 solid 0.3rem;
+  margin: 0.2rem;
+  height: 15rem;
+  width: 31rem;
+}
+
+.body__alpargatas:hover, .body__alpargatas--2:hover, .body__alpargatas--3:hover, .body__alpargatas--4:hover {
+  transform: scale(1.05);
+}
+
+.body__alpargatas--5:hover {
+  transform: scale(1.05);
+}
+
+.d-block {
+  height: 40rem;
+}
+
+.ofertas__titulo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #daa520;
+}
+
+.card__inicio, .card__productos {
+  width: 17rem;
+}
+
+.card__productos {
+  display: inline-block;
+}
+
+.card {
+  margin: 1rem;
+}
+
+.card-text, .boton__crearcuenta {
+  text-align: center;
+}
+
+.formulario {
+  color: #daa520;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #333333;
+  padding: 1rem;
+  text-align: center;
+}
+
+.form-checkbox {
+  color: #daa520;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #333333;
+  padding: 1rem;
+}
+
+.aside {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  font-family: "Fasthand", cursiva;
+  background-color: #212121;
+  color: #daa520;
+  border: #daa520 solid 0.3rem;
+  width: 22vw;
+  grid-area: aside;
+}
+
+.list-title {
+  border-bottom: 0.1rem #daa520 dashed;
+  margin-left: 1rem;
+  padding-top: 2rem;
+}
+
+.list-sub {
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+
+.form-check {
+  margin-left: 35.2rem;
+  margin-bottom: 1rem;
+}
+
+.py-5 {
+  color: #daa520;
+  background-color: #212121;
+  font-family: "Fasthand", cursiva;
+}
+
+.footer__title {
+  margin-left: 1rem;
+}
+
+.nav {
+  margin: 1rem 2rem 0rem 1rem;
+}
+
+.footer__link {
+  color: #daa520;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .body__video {
+    display: none;
+  }
+  .form-check {
+    margin-left: 30.5rem;
+  }
+  .footer__list {
+    margin-top: 1rem;
+    margin-left: 0.1rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .form-check {
+    margin-left: 25.2rem;
+  }
+  .card__inicio, .card__productos {
+    width: 14.5rem;
+  }
+  .footer__list {
+    margin-top: 1rem;
+    margin-left: 0.4rem;
+  }
+  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4 {
+    height: 12rem;
+    width: 12rem;
+  }
+  .body__alpargatas--5 {
+    height: 13rem;
+    width: 25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__subtitle {
+    text-align: center;
+    margin-left: 0rem;
+  }
+  .img-navbar {
+    display: inline-block;
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 12rem;
+  }
+  .menu {
+    display: none;
+  }
+  .d-block {
+    height: 25rem;
+  }
+  .carousel__title {
+    font-size: 0.8rem;
+  }
+  .body__title {
+    font-size: 1.2rem;
+  }
+  .text-center {
+    font-size: 0.8rem;
+  }
+  .body__link {
+    font-size: 1rem;
+  }
+  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4 {
+    width: 10rem;
+    height: 10rem;
+  }
+  .body__alpargatas--5 {
+    width: 20rem;
+    height: 10rem;
+  }
+  .list-title {
+    font-size: 1.2rem;
+    margin-left: 0.4rem;
+  }
+  .list-sub {
+    font-size: 0.8rem;
+    margin-left: 0.8rem;
+  }
+  .body__subtitle {
+    font-size: 1.2rem;
+  }
+  .body__text, .text-center {
+    font-size: 0.8rem;
+  }
+  .body__list {
+    font-size: 0.8rem;
+  }
+  .form-check {
+    margin-left: 17rem;
+  }
+  .card__inicio, .card__productos {
+    width: 17rem;
+    margin-left: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .form-check {
+    margin-left: 11.7rem;
+  }
+  .codigo__form--barra {
+    margin-left: 2rem;
+  }
+  .footer__list {
+    margin-top: 1rem;
+    margin-left: 0.4rem;
+  }
+  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4 {
+    height: 14rem;
+    width: 14rem;
+    margin-top: 0.5rem;
+  }
+  .body__alpargatas--5 {
+    height: 13rem;
+    width: 25rem;
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #barra-codigo {
+    margin-left: 0rem;
+  }
+  .form-check {
+    margin-left: 8rem;
+  }
+  .footer__list {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    display: block;
+  }
+  .codigo__form--barra {
+    margin-left: 2rem;
+  }
+  .card__inicio, .card__productos {
+    width: 17rem;
+    margin-left: 6.5rem;
+  }
+  .rounded {
+    width: 20rem;
+    height: 10rem;
+  }
+  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4 {
+    height: 12rem;
+    width: 12rem;
+    margin-top: 0.5rem;
+  }
+  .body__alpargatas--5 {
+    height: 13rem;
+    width: 25rem;
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .rounded {
+    width: 15rem;
+    height: 7.5rem;
+  }
+  .img__Mario {
+    width: 10rem;
+    height: 10rem;
+  }
+  .footer {
+    font-size: 1rem;
+    grid-area: footer;
+  }
+  .footer__title {
+    font-size: 1.2rem;
+  }
+  .footer__list {
+    margin-top: 1rem;
+    margin-left: 0.2rem;
+  }
+  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4 {
+    height: 12rem;
+    width: 12rem;
+    margin-top: 0.5rem;
+  }
+  .body__alpargatas--5 {
+    display: none;
+  }
+  .form-check {
+    margin-left: 3rem;
+  }
+  .card__productos {
+    width: 12rem;
+  }
+  .card__inicio, .card__productos {
+    width: 17rem;
+    margin-left: 1.5rem;
+  }
+  .body__subtitle {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
