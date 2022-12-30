@@ -217,8 +217,7 @@
     font-weight: map-get($map: $estilo, $key: FW);
     font-size: $ancho+0.2;
     background-color: map-get($map: $estilo, $key: background3);
-    padding: $ancho;
-    text-align: map-get($map: $posiciones, $key: JC);
+    padding: $ancho $ancho*7;
 }
 
 .form-checkbox{
@@ -229,6 +228,10 @@
     background-color: map-get($map: $estilo, $key: background3);
     padding: $ancho;
     text-align: center;
+}
+
+.form-label{
+    margin-top:$ancho;
 }
 
 .aside{
@@ -322,6 +325,9 @@
    }
    
    @media screen and (max-width: 768px ){
+    .formulario{
+        font-size: ($ancho)-0.2;
+    }
     .footer__subtitle{
         text-align: center;
         margin-left: $ancho*0;
@@ -408,6 +414,9 @@
             height: 13rem;
             width: 25rem;
             margin-top: 0.5rem;
+          }
+          .formulario{
+            padding:$ancho;
           }
    }
    
