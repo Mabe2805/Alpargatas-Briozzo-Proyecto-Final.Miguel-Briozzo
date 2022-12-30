@@ -26,10 +26,6 @@
 
 }
 
-.piedepagina{
-    grid-area: footer;
-}
-
 .article{
     grid-area: article;
 }
@@ -232,6 +228,7 @@
     font-size: $ancho+0.2;
     background-color: map-get($map: $estilo, $key: background3);
     padding: $ancho;
+    text-align: center;
 }
 
 .aside{
@@ -267,10 +264,11 @@
     @extend .card-text;
 }
 
-.py-5{
+.py-3{
     color: map-get($map: $estilo, $key: Color);
     background-color: map-get($map: $estilo, $key: background);
     font-family: $FF2;
+    grid-area: footer;
 }
 
 .footer__title{
