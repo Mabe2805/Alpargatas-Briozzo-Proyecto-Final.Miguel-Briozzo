@@ -64,6 +64,7 @@
     border: map-get($map: $estilo, $key: borde);
     background-color: map-get($map: $estilo, $key: background);
     width: 100%;
+    padding:$ancho;
 }
 
 .nav-link{
@@ -75,10 +76,6 @@
     color: map-get($map: $estilo, $key: Color);
     height: $ancho;
     width: $ancho;
-}
-
-.btn{
-    margin:$ancho;
 }
 
 .body{
@@ -230,6 +227,13 @@
     text-align: center;
 }
 
+.checkbox{
+    color: map-get($map: $estilo, $key: Color);
+    text-align: center;
+    padding: $ancho;
+    font-size: $ancho+0.2;
+}
+
 .form-label{
     margin-top:$ancho;
 }
@@ -263,6 +267,10 @@
     margin-bottom: $ancho;
 }
 
+.form-signin{
+    padding: $ancho $ancho*21;
+}
+
 .boton__crearcuenta{
     @extend .card-text;
 }
@@ -272,20 +280,16 @@
     background-color: map-get($map: $estilo, $key: background);
     font-family: $FF2;
     grid-area: footer;
+    padding: $ancho;
 }
 
-.footer__title{
-    margin-left: $ancho;
-}
-
-
-.nav{
-    margin: $ancho $ancho*2 $ancho*0 $ancho;
-}
 
 .footer__link{
     color: map-get($map: $estilo, $key: Color);
-    margin-right: $ancho;
+}
+
+.modal{
+    background-color: map-get($map: $estilo, $key: background);
 }
 
 @media screen and (max-width:1200px){

@@ -52,6 +52,7 @@
   border: #daa520 solid 0.3rem;
   background-color: #212121;
   width: 100%;
+  padding: 1rem;
 }
 
 .nav-link {
@@ -63,10 +64,6 @@
   color: #daa520;
   height: 1rem;
   width: 1rem;
-}
-
-.btn {
-  margin: 1rem;
 }
 
 .body {
@@ -195,6 +192,13 @@
   text-align: center;
 }
 
+.checkbox {
+  color: #daa520;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
 .form-label {
   margin-top: 1rem;
 }
@@ -228,24 +232,24 @@
   margin-bottom: 1rem;
 }
 
+.form-signin {
+  padding: 1rem 21rem;
+}
+
 .py-3 {
   color: #daa520;
   background-color: #212121;
   font-family: "Fasthand", cursiva;
   grid-area: footer;
-}
-
-.footer__title {
-  margin-left: 1rem;
-}
-
-.nav {
-  margin: 1rem 2rem 0rem 1rem;
+  padding: 1rem;
 }
 
 .footer__link {
   color: #daa520;
-  margin-right: 1rem;
+}
+
+.modal {
+  background-color: #212121;
 }
 
 @media screen and (max-width: 1200px) {
