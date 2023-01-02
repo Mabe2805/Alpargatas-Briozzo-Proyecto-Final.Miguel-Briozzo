@@ -11,7 +11,7 @@
 }
 
 #grid-productos{
-    display: grid;
+    display: map-get($map: $posiciones, $key: dis4);
     grid-template-rows: repeat(1, 1fr);
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -19,8 +19,8 @@
     "aside article article article"
     "footer footer footer footer"
     ;
-    height: 100vh;
-    width: 100%;
+    height: $ancho-pantalla*100;
+    width: $ancho-porcentaje*100;
     
     
 
@@ -38,6 +38,7 @@
     background-color: map-get($map: $estilo, $key: background);
     font-family: $FF2;
 }
+
 .img-fluid{
     width: $ancho*10;
     height: $ancho*10;
@@ -57,13 +58,13 @@
 }
 
 .img-navbar{
-    display:none;
+    display: map-get($map: $posiciones, $key: dis5);
 }
 
 .navbar-nav{
     border: map-get($map: $estilo, $key: borde);
     background-color: map-get($map: $estilo, $key: background);
-    width: 100%;
+    width: $ancho-porcentaje*100;
     padding:$ancho;
 }
 
@@ -84,12 +85,15 @@
     background-color: map-get($map: $estilo, $key: background3);
 }
 
-.body__title{
+@mixin titulo(){
     display: map-get($map: $posiciones, $key: dis);
     flex-flow: map-get($map: $posiciones, $key: Flex-F);
     justify-content: map-get($map: $posiciones, $key: JC);
-    color: map-get($map: $estilo, $key: Color);
     font-size: $ancho*2;
+}
+.body__title{
+    @include titulo();
+    color: map-get($map: $estilo, $key: Color);
     font-weight: map-get($map: $estilo, $key: FW);
     padding-top: $ancho;
 }
@@ -162,18 +166,12 @@
 }
 
 .body__alpargatas--5{
-    border-radius: ($ancho)-0.5;
-    border: map-get($map: $estilo, $key: borde);
+    @extend .body__alpargatas;
     margin: ($ancho)-0.8;
-    height: $ancho*15;
     width: $ancho*31;
 }
 
 .body__alpargatas:hover{
-    transform: $animacion;
-}
-
-.body__alpargatas--5:hover{
     transform: $animacion;
 }
 
@@ -182,10 +180,7 @@
 }
 
 .ofertas__titulo{
-    display: map-get($map: $posiciones, $key: dis);
-    flex-flow: map-get($map: $posiciones, $key: Flex-F);
-    justify-content: map-get($map: $posiciones, $key: JC);
-    font-size: $ancho+0.5;
+    @include titulo();
     margin-bottom: $ancho*2;
     background-color: #daa520;
 }
@@ -218,13 +213,8 @@
 }
 
 .form-checkbox{
-    color: map-get($map: $estilo, $key: Color);
-    font-family: $FF;
-    font-weight: map-get($map: $estilo, $key: FW);
-    font-size: $ancho+0.2;
-    background-color: map-get($map: $estilo, $key: background3);
-    padding: $ancho;
-    text-align: center;
+    @extend .formulario;
+    text-align: map-get($map: $posiciones, $key: JC);
 }
 
 .checkbox{
@@ -262,17 +252,8 @@
     padding-top: $ancho;
 }
 
-.form-check{
-    margin-left: ($ancho*35)+0.2;
-    margin-bottom: $ancho;
-}
-
 .form-signin{
     padding: $ancho $ancho*21;
-}
-
-.boton__crearcuenta{
-    @extend .card-text;
 }
 
 .py-3{
@@ -283,25 +264,13 @@
     padding: $ancho;
 }
 
-
-.footer__link{
-    color: map-get($map: $estilo, $key: Color);
-}
-
 .modal{
     background-color: map-get($map: $estilo, $key: background);
 }
 
 @media screen and (max-width:1200px){
     .body__video{
-       display:none
-    }
-    .form-check{
-       margin-left: 30.5rem;
-    }
-    .footer__list{
-        margin-top:1rem;
-        margin-left: 0.1rem;
+       display: map-get($map: $posiciones, $key: dis5);
     }
     .form-signin{
         padding: $ancho $ancho*18;
@@ -309,24 +278,16 @@
    }
    
    @media screen and (max-width:1024px){
-    .form-check{
-           margin-left: 25.2rem;
-        }
         .card__inicio{
             width: $ancho*14.5;
         }
-        .footer__list{
-            margin-top:1rem;
-            margin-left: 0.4rem;
-        }
         .body__alpargatas{
-            height: 12rem;
-            width: 12rem;
+            height: $ancho*12;
+            width: $ancho*12;
           }
-          
           .body__alpargatas--5 {
-            height: 13rem;
-            width: 25rem;
+            height: $ancho*13;
+            width: $ancho*25;
           }
           .form-signin{
             padding: $ancho $ancho*12;
@@ -339,65 +300,61 @@
         font-size: ($ancho)-0.2;
     }
     .footer__subtitle{
-        text-align: center;
+        text-align: map-get($map: $posiciones, $key: JC);
         margin-left: $ancho*0;
     }
     .img-navbar{
-        display: inline-block;
+        display: map-get($map: $posiciones, $key: dis3);
         margin: $ancho;
         width: $ancho*3;
         height: $ancho*3;
         border-radius: $ancho*12;
     }
     .menu {
-        display: none;
+        display: map-get($map: $posiciones, $key: dis5);
       }
     .d-block{
-           height: 25rem;  
+           height: $ancho*25;  
        }
        .carousel__title{
-           font-size: 0.8rem;
+           font-size: ($ancho)-0.2;
        }
        .body__title{
-           font-size: 1.2rem;
+           font-size: $ancho*1.2;
        }
        .text-center{
-           font-size: 0.8rem;
+           font-size: ($ancho)-0.2;
        }
        .body__link{
-           font-size: 1rem;
+           font-size: $ancho;
        }
        .body__alpargatas{
-           width: 10rem;
-           height: 10rem;
+           width: $ancho*10;
+           height: $ancho*10;
        }
        .body__alpargatas--5{
-           width: 20rem;
-           height: 10rem;
+           width: $ancho*20;
        }
        .list-title{
-           font-size: 1.2rem;
-           margin-left: 0.4rem;
+           font-size: $ancho*1.2;
+           margin-left: ($ancho)-0.6;
        }
        .list-sub{
-           font-size: 0.8rem;
-           margin-left:0.8rem;
+           font-size: ($ancho)-0.2;
+           margin-left: ($ancho)-0.2;
        }
        .body__subtitle{
-           font-size:1.2rem;
+           font-size: $ancho*1.2;
        }
        .body__text{
-           font-size:0.8rem;
+           font-size: ($ancho)-0.2;
        }
        .body__list{
-           font-size:0.8rem;
-       }
-       .form-check{
-           margin-left: 17rem;
+           font-size: ($ancho)-0.2;
        }
        .card__inicio{
         width: $ancho*17;
-        margin-left: 3rem;
+        margin-left: $ancho*3;
     }
     .form-signin{
         padding: $ancho $ancho*5;
@@ -407,26 +364,15 @@
    }
    
    @media screen and (max-width: 600px){
-    .form-check{
-           margin-left: 11.7rem;
-        }
-        .codigo__form--barra{
-            margin-left: 2rem;
-        }
-        .footer__list{
-            margin-top:1rem;
-            margin-left: 0.4rem;
-        }
         .body__alpargatas{
-            height: 14rem;
-            width: 14rem;
-            margin-top: 0.5rem;
+            height: $ancho*14;
+            width: $ancho*14;
+            margin-top: ($ancho)-0.5;
           }
           
           .body__alpargatas--5 {
-            height: 13rem;
-            width: 25rem;
-            margin-top: 0.5rem;
+            height: $ancho*13;
+            width: $ancho*25;
           }
           .formulario{
             padding:$ancho;
@@ -437,35 +383,23 @@
     #barra-codigo{
         margin-left: $ancho*0;
     }
-       .form-check{
-           margin-left: 8rem;
-        }
-        .footer__list {
-            margin-top: 1rem;
-            margin-left: 1rem;
-            display:block;
-          }
-          .codigo__form--barra{
-            margin-left: 2rem;
-        }
         .card__inicio{
             width: $ancho*17;
-            margin-left: 6.5rem;
+            margin-left: $ancho*6.5;
         }
         .rounded{
-            width: 20rem;
-            height: 10rem;
+            width: $ancho*20;
+            height: $ancho*10;
         }
         .body__alpargatas{
-            height: 12rem;
-            width: 12rem;
-            margin-top: 0.5rem;
+            height: $ancho*12;
+            width: $ancho*12;
+            margin-top: ($ancho)-0.5;
           }
           
           .body__alpargatas--5 {
-            height: 13rem;
-            width: 25rem;
-            margin-top: 0.5rem;
+            height: $ancho*13;
+            width: $ancho*25;
           }
           .form-signin{
             padding: $ancho $ancho*0;
@@ -474,44 +408,37 @@
    
    @media screen and (max-width: 320px ){
        .rounded{
-           width: 15rem;
-           height: 7.5rem;
+           width: $ancho*15;
+           height: $ancho*7.5;
        }
        .img__Mario{
-           width: 10rem;
-           height: 10rem;
+           width: $ancho*10;
+           height: $ancho*10;
        }
        .footer{
-           font-size: 1rem;
+           font-size: $ancho;
            grid-area: footer;
        }
        .footer__title{
-           font-size: 1.2rem;
-       }
-       .footer__list{
-           margin-top:1rem;
-           margin-left: 0.2rem;
+           font-size: $ancho*1.2;
        }
        .body__alpargatas{
-        height: 12rem;
-        width: 12rem;
-        margin-top: 0.5rem;
+        height: $ancho*12;
+        width: $ancho*12;
+        margin-top: ($ancho)-0.5;
       }
       
       .body__alpargatas--5 {
-        display:none;
+        display: map-get($map: $posiciones, $key: dis5);
       }
-       .form-check{
-           margin-left: 3rem;
-       }
         .card__productos{
-           width: 12rem;
+           width: $ancho*12;
        }
        .card__inicio{
         width: $ancho*17;
-        margin-left: 1.5rem;
+        margin-left: $ancho*1.5;
        }
        .body__subtitle{
-        font-size:1rem;
+        font-size: $ancho;
        }
    }

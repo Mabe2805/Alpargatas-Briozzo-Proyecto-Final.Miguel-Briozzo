@@ -9,7 +9,7 @@
   grid-template-rows: repeat(1, 1fr);
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas: "header header header header" "aside article article article" "footer footer footer footer";
-  height: 100vh;
+  height: 100vw;
   width: 100%;
 }
 
@@ -76,8 +76,8 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  color: #daa520;
   font-size: 2rem;
+  color: #daa520;
   font-weight: bold;
   padding-top: 1rem;
 }
@@ -120,7 +120,7 @@
   border: 0.2rem #000000 solid;
 }
 
-.body__alpargatas, .body__alpargatas--4, .body__alpargatas--3, .body__alpargatas--2 {
+.body__alpargatas, .body__alpargatas--5, .body__alpargatas--4, .body__alpargatas--3, .body__alpargatas--2 {
   border-radius: 0.5rem;
   border: #daa520 solid 0.3rem;
   margin: 2rem 0.2rem 0rem 0.2rem;
@@ -129,18 +129,11 @@
 }
 
 .body__alpargatas--5 {
-  border-radius: 0.5rem;
-  border: #daa520 solid 0.3rem;
   margin: 0.2rem;
-  height: 15rem;
   width: 31rem;
 }
 
-.body__alpargatas:hover, .body__alpargatas--2:hover, .body__alpargatas--3:hover, .body__alpargatas--4:hover {
-  transform: scale(1.05);
-}
-
-.body__alpargatas--5:hover {
+.body__alpargatas:hover, .body__alpargatas--2:hover, .body__alpargatas--3:hover, .body__alpargatas--4:hover, .body__alpargatas--5:hover {
   transform: scale(1.05);
 }
 
@@ -152,7 +145,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
   background-color: #daa520;
 }
@@ -169,11 +162,11 @@
   margin: 1rem;
 }
 
-.card-text, .boton__crearcuenta {
+.card-text {
   text-align: center;
 }
 
-.formulario {
+.formulario, .form-checkbox {
   color: #daa520;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -183,12 +176,6 @@
 }
 
 .form-checkbox {
-  color: #daa520;
-  font-family: "Raleway", sans-serif;
-  font-weight: bold;
-  font-size: 1.2rem;
-  background-color: #333333;
-  padding: 1rem;
   text-align: center;
 }
 
@@ -227,11 +214,6 @@
   padding-top: 1rem;
 }
 
-.form-check {
-  margin-left: 35.2rem;
-  margin-bottom: 1rem;
-}
-
 .form-signin {
   padding: 1rem 21rem;
 }
@@ -244,10 +226,6 @@
   padding: 1rem;
 }
 
-.footer__link {
-  color: #daa520;
-}
-
 .modal {
   background-color: #212121;
 }
@@ -256,29 +234,15 @@
   .body__video {
     display: none;
   }
-  .form-check {
-    margin-left: 30.5rem;
-  }
-  .footer__list {
-    margin-top: 1rem;
-    margin-left: 0.1rem;
-  }
   .form-signin {
     padding: 1rem 18rem;
   }
 }
 @media screen and (max-width: 1024px) {
-  .form-check {
-    margin-left: 25.2rem;
-  }
   .card__inicio, .card__productos {
     width: 14.5rem;
   }
-  .footer__list {
-    margin-top: 1rem;
-    margin-left: 0.4rem;
-  }
-  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4 {
+  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4, .body__alpargatas--5 {
     height: 12rem;
     width: 12rem;
   }
@@ -291,7 +255,7 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .formulario {
+  .formulario, .form-checkbox {
     font-size: 0.8rem;
   }
   .footer__subtitle {
@@ -323,13 +287,12 @@
   .body__link {
     font-size: 1rem;
   }
-  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4 {
+  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4, .body__alpargatas--5 {
     width: 10rem;
     height: 10rem;
   }
   .body__alpargatas--5 {
     width: 20rem;
-    height: 10rem;
   }
   .list-title {
     font-size: 1.2rem;
@@ -348,9 +311,6 @@
   .body__list {
     font-size: 0.8rem;
   }
-  .form-check {
-    margin-left: 17rem;
-  }
   .card__inicio, .card__productos {
     width: 17rem;
     margin-left: 3rem;
@@ -360,17 +320,7 @@
   }
 }
 @media screen and (max-width: 600px) {
-  .form-check {
-    margin-left: 11.7rem;
-  }
-  .codigo__form--barra {
-    margin-left: 2rem;
-  }
-  .footer__list {
-    margin-top: 1rem;
-    margin-left: 0.4rem;
-  }
-  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4 {
+  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4, .body__alpargatas--5 {
     height: 14rem;
     width: 14rem;
     margin-top: 0.5rem;
@@ -378,26 +328,14 @@
   .body__alpargatas--5 {
     height: 13rem;
     width: 25rem;
-    margin-top: 0.5rem;
   }
-  .formulario {
+  .formulario, .form-checkbox {
     padding: 1rem;
   }
 }
 @media screen and (max-width: 480px) {
   #barra-codigo {
     margin-left: 0rem;
-  }
-  .form-check {
-    margin-left: 8rem;
-  }
-  .footer__list {
-    margin-top: 1rem;
-    margin-left: 1rem;
-    display: block;
-  }
-  .codigo__form--barra {
-    margin-left: 2rem;
   }
   .card__inicio, .card__productos {
     width: 17rem;
@@ -407,7 +345,7 @@
     width: 20rem;
     height: 10rem;
   }
-  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4 {
+  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4, .body__alpargatas--5 {
     height: 12rem;
     width: 12rem;
     margin-top: 0.5rem;
@@ -415,7 +353,6 @@
   .body__alpargatas--5 {
     height: 13rem;
     width: 25rem;
-    margin-top: 0.5rem;
   }
   .form-signin {
     padding: 1rem 0rem;
@@ -437,20 +374,13 @@
   .footer__title {
     font-size: 1.2rem;
   }
-  .footer__list {
-    margin-top: 1rem;
-    margin-left: 0.2rem;
-  }
-  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4 {
+  .body__alpargatas, .body__alpargatas--2, .body__alpargatas--3, .body__alpargatas--4, .body__alpargatas--5 {
     height: 12rem;
     width: 12rem;
     margin-top: 0.5rem;
   }
   .body__alpargatas--5 {
     display: none;
-  }
-  .form-check {
-    margin-left: 3rem;
   }
   .card__productos {
     width: 12rem;
