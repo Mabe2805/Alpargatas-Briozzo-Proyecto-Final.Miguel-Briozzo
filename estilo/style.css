@@ -13,6 +13,12 @@
   width: 100%;
 }
 
+.card__display {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 .article {
   grid-area: article;
 }
@@ -190,6 +196,11 @@
   margin-top: 1rem;
 }
 
+aside {
+  background-color: #212121;
+  border: #daa520 solid 0.3rem;
+}
+
 .aside {
   display: flex;
   flex-flow: column wrap;
@@ -198,7 +209,6 @@
   font-family: "Fasthand", cursiva;
   background-color: #212121;
   color: #daa520;
-  border: #daa520 solid 0.3rem;
   width: 22vw;
   grid-area: aside;
 }
@@ -313,10 +323,12 @@
   }
   .card__inicio, .card__productos {
     width: 17rem;
-    margin-left: 3rem;
   }
   .form-signin {
     padding: 1rem 5rem;
+  }
+  .card__productos {
+    width: 15rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -332,14 +344,16 @@
   .formulario, .form-checkbox {
     padding: 1rem;
   }
+  .card__productos {
+    width: 15rem;
+  }
+  .card__inicio, .card__productos {
+    width: 14.5rem;
+  }
 }
 @media screen and (max-width: 480px) {
   #barra-codigo {
     margin-left: 0rem;
-  }
-  .card__inicio, .card__productos {
-    width: 17rem;
-    margin-left: 6.5rem;
   }
   .rounded {
     width: 20rem;
@@ -382,15 +396,11 @@
   .body__alpargatas--5 {
     display: none;
   }
-  .card__productos {
-    width: 12rem;
-  }
-  .card__inicio, .card__productos {
-    width: 17rem;
-    margin-left: 1.5rem;
-  }
   .body__subtitle {
     font-size: 1rem;
+  }
+  aside {
+    padding-right: 2rem;
   }
 }
 
