@@ -131,7 +131,7 @@
 .body__list{
     font-size: $ancho+0.1;
     margin: $ancho;
-    color: map-get($map: $estilo, $key: color3);
+    color: map-get($map: $estilo, $key: color4);
 }
 
 .body__video{
@@ -413,13 +413,14 @@ aside{
             width: $ancho*12;
             margin-top: ($ancho)-0.5;
           }
-          
           .body__alpargatas--5 {
-            height: $ancho*13;
-            width: $ancho*25;
+            display: map-get($map: $posiciones, $key: dis5);
           }
           .form-signin{
             padding: $ancho $ancho*0;
+        }
+        aside{
+            padding-right: 2rem;
         }
    }
    
@@ -444,14 +445,7 @@ aside{
         width: $ancho*12;
         margin-top: ($ancho)-0.5;
       }
-      
-      .body__alpargatas--5 {
-        display: map-get($map: $posiciones, $key: dis5);
-      }
        .body__subtitle{
         font-size: $ancho;
        }
-    aside{
-        padding-right: 2rem;
-    }
    }

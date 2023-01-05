@@ -105,7 +105,7 @@
 .body__list {
   font-size: 1.1rem;
   margin: 1rem;
-  color: #000000;
+  color: #F20603;
 }
 
 .body__video {
@@ -365,11 +365,13 @@ aside {
     margin-top: 0.5rem;
   }
   .body__alpargatas--5 {
-    height: 13rem;
-    width: 25rem;
+    display: none;
   }
   .form-signin {
     padding: 1rem 0rem;
+  }
+  aside {
+    padding-right: 2rem;
   }
 }
 @media screen and (max-width: 320px) {
@@ -393,14 +395,8 @@ aside {
     width: 12rem;
     margin-top: 0.5rem;
   }
-  .body__alpargatas--5 {
-    display: none;
-  }
   .body__subtitle {
     font-size: 1rem;
-  }
-  aside {
-    padding-right: 2rem;
   }
 }
 
