@@ -196,12 +196,12 @@
   margin-top: 1rem;
 }
 
-aside {
+.aside {
   background-color: #212121;
   border: #daa520 solid 0.3rem;
 }
 
-.aside {
+.barra-vertical {
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
@@ -370,7 +370,7 @@ aside {
   .form-signin {
     padding: 1rem 0rem;
   }
-  aside {
+  .aside {
     padding-right: 2rem;
   }
 }

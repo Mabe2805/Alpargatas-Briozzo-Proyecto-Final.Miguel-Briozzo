@@ -27,9 +27,9 @@
 }
 
 .card__display{
-    display:flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: map-get($map: $posiciones, $key: dis);
+    justify-content: map-get($map: $posiciones, $key: JC3);
+    flex-wrap: map-get($map: $posiciones, $key: Flex-W);
 
 }
 
@@ -236,12 +236,12 @@
     margin-top:$ancho;
 }
 
-aside{
+.aside{
     background-color: map-get($map: $estilo, $key: background);
     border: map-get($map: $estilo, $key: borde);
 }
 
-.aside{
+.barra-vertical{
     display: map-get($map: $posiciones, $key: dis);
     flex-flow: map-get($map: $posiciones, $key: Flex-F2);
     justify-content: map-get($map: $posiciones, $key: JC2);
@@ -419,8 +419,8 @@ aside{
           .form-signin{
             padding: $ancho $ancho*0;
         }
-        aside{
-            padding-right: 2rem;
+        .aside{
+            padding-right: $ancho*2;
         }
    }
    
